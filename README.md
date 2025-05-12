@@ -29,3 +29,26 @@ This is the backend API for the Typing Trainer project — an online typing spee
 ```bash
 git https://github.com/PlaguesW/typing_test_prog.git
 cd typing_test_prog
+```
+
+2. **Create virtual environment**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. **Install dependencies**
+```bash
+pip3 install -r requirements.txt
+```
+
+4. **Configure environment**
+- Create .env file:
+```bash
+DATABASE_URL=postgresql://user:password@localhost:5432/typingdb
+```
+
+5. **Run server**
+```bash
+uvicorn app.main:app --reload
+```
